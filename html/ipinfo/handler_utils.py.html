@@ -1,0 +1,221 @@
+<html><body><h1>ipinfo/handler_utils.py</h1>Killed 36 out of 56 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 187</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -18,7 +18,7 @@
+ COUNTRY_EU_FILE_DEFAULT = "eu.json"
+ 
+ # The max amount of IPs allowed by the API per batch request.
+-BATCH_MAX_SIZE = 1000
++BATCH_MAX_SIZE = 1001
+ 
+ # The default max size of the cache in terms of number of items.
+ CACHE_MAXSIZE = 4096
+</pre><h3>Mutant 188</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -18,7 +18,7 @@
+ COUNTRY_EU_FILE_DEFAULT = "eu.json"
+ 
+ # The max amount of IPs allowed by the API per batch request.
+-BATCH_MAX_SIZE = 1000
++BATCH_MAX_SIZE = None
+ 
+ # The default max size of the cache in terms of number of items.
+ CACHE_MAXSIZE = 4096
+</pre><h3>Mutant 189</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -21,7 +21,7 @@
+ BATCH_MAX_SIZE = 1000
+ 
+ # The default max size of the cache in terms of number of items.
+-CACHE_MAXSIZE = 4096
++CACHE_MAXSIZE = 4097
+ 
+ # The default TTL of the cache in seconds
+ CACHE_TTL = 60 * 60 * 24
+</pre><h3>Mutant 191</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -24,7 +24,7 @@
+ CACHE_MAXSIZE = 4096
+ 
+ # The default TTL of the cache in seconds
+-CACHE_TTL = 60 * 60 * 24
++CACHE_TTL = 61 * 60 * 24
+ 
+ # The current version of the cached data.
+ # Update this if the data being cached has changed in shape for the same key.
+</pre><h3>Mutant 192</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -24,7 +24,7 @@
+ CACHE_MAXSIZE = 4096
+ 
+ # The default TTL of the cache in seconds
+-CACHE_TTL = 60 * 60 * 24
++CACHE_TTL = 60 / 60 * 24
+ 
+ # The current version of the cached data.
+ # Update this if the data being cached has changed in shape for the same key.
+</pre><h3>Mutant 193</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -24,7 +24,7 @@
+ CACHE_MAXSIZE = 4096
+ 
+ # The default TTL of the cache in seconds
+-CACHE_TTL = 60 * 60 * 24
++CACHE_TTL = 60 * 61 * 24
+ 
+ # The current version of the cached data.
+ # Update this if the data being cached has changed in shape for the same key.
+</pre><h3>Mutant 194</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -24,7 +24,7 @@
+ CACHE_MAXSIZE = 4096
+ 
+ # The default TTL of the cache in seconds
+-CACHE_TTL = 60 * 60 * 24
++CACHE_TTL = 60 * 60 / 24
+ 
+ # The current version of the cached data.
+ # Update this if the data being cached has changed in shape for the same key.
+</pre><h3>Mutant 195</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -24,7 +24,7 @@
+ CACHE_MAXSIZE = 4096
+ 
+ # The default TTL of the cache in seconds
+-CACHE_TTL = 60 * 60 * 24
++CACHE_TTL = 60 * 60 * 25
+ 
+ # The current version of the cached data.
+ # Update this if the data being cached has changed in shape for the same key.
+</pre><h3>Mutant 197</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -28,7 +28,7 @@
+ 
+ # The current version of the cached data.
+ # Update this if the data being cached has changed in shape for the same key.
+-CACHE_KEY_VSN = "1"
++CACHE_KEY_VSN = "XX1XX"
+ 
+ # The default request timeout for per-IP requests.
+ REQUEST_TIMEOUT_DEFAULT = 2
+</pre><h3>Mutant 198</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -28,7 +28,7 @@
+ 
+ # The current version of the cached data.
+ # Update this if the data being cached has changed in shape for the same key.
+-CACHE_KEY_VSN = "1"
++CACHE_KEY_VSN = None
+ 
+ # The default request timeout for per-IP requests.
+ REQUEST_TIMEOUT_DEFAULT = 2
+</pre><h3>Mutant 201</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -34,7 +34,7 @@
+ REQUEST_TIMEOUT_DEFAULT = 2
+ 
+ # The default request timeout for batch requests.
+-BATCH_REQ_TIMEOUT_DEFAULT = 5
++BATCH_REQ_TIMEOUT_DEFAULT = 6
+ 
+ 
+ def get_headers(access_token):
+</pre><h3>Mutant 202</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -34,7 +34,7 @@
+ REQUEST_TIMEOUT_DEFAULT = 2
+ 
+ # The default request timeout for batch requests.
+-BATCH_REQ_TIMEOUT_DEFAULT = 5
++BATCH_REQ_TIMEOUT_DEFAULT = None
+ 
+ 
+ def get_headers(access_token):
+</pre><h3>Mutant 204</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -40,7 +40,7 @@
+ def get_headers(access_token):
+     """Build headers for request to IPinfo API."""
+     headers = {
+-        "user-agent": "IPinfoClient/Python{version}/{sdk_version}".format(
++        "user-agent": "XXIPinfoClient/Python{version}/{sdk_version}XX".format(
+             version=sys.version_info[0], sdk_version=SDK_VERSION
+         ),
+         "accept": "application/json",
+</pre><h3>Mutant 205</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -41,7 +41,7 @@
+     """Build headers for request to IPinfo API."""
+     headers = {
+         "user-agent": "IPinfoClient/Python{version}/{sdk_version}".format(
+-            version=sys.version_info[0], sdk_version=SDK_VERSION
++            version=sys.version_info[1], sdk_version=SDK_VERSION
+         ),
+         "accept": "application/json",
+     }
+</pre><h3>Mutant 210</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -47,7 +47,7 @@
+     }
+ 
+     if access_token:
+-        headers["authorization"] = "Bearer {}".format(access_token)
++        headers["authorization"] = "XXBearer {}XX".format(access_token)
+ 
+     return headers
+ 
+</pre><h3>Mutant 211</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -47,7 +47,7 @@
+     }
+ 
+     if access_token:
+-        headers["authorization"] = "Bearer {}".format(access_token)
++        headers["authorization"] = None
+ 
+     return headers
+ 
+</pre><h3>Mutant 216</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -57,7 +57,7 @@
+     Format details given a countries object.
+     """
+     details["country_name"] = countries.get(details.get("country"))
+-    details["isEU"] = details.get("country") in eu_countries
++    details["isEU"] = details.get("XXcountryXX") in eu_countries
+     details["latitude"], details["longitude"] = read_coords(details.get("loc"))
+ 
+ 
+</pre><h3>Mutant 225</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -69,7 +69,7 @@
+     Returns None for each tuple item if the form is invalid.
+     """
+     lat, lon = None, None
+-    coords = tuple(location.split(",")) if location else ""
++    coords = tuple(location.split(",")) if location else "XXXX"
+     if len(coords) == 2 and coords[0] and coords[1]:
+         lat, lon = coords[0], coords[1]
+     return lat, lon
+</pre><h3>Mutant 229</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -70,7 +70,7 @@
+     """
+     lat, lon = None, None
+     coords = tuple(location.split(",")) if location else ""
+-    if len(coords) == 2 and coords[0] and coords[1]:
++    if len(coords) == 2 and coords[1] and coords[1]:
+         lat, lon = coords[0], coords[1]
+     return lat, lon
+ 
+</pre><h3>Mutant 231</h3><pre>--- ipinfo/handler_utils.py
++++ ipinfo/handler_utils.py
+@@ -70,7 +70,7 @@
+     """
+     lat, lon = None, None
+     coords = tuple(location.split(",")) if location else ""
+-    if len(coords) == 2 and coords[0] and coords[1]:
++    if len(coords) == 2 or coords[0] and coords[1]:
+         lat, lon = coords[0], coords[1]
+     return lat, lon
+ 
+</pre></body></html>

@@ -1,0 +1,41 @@
+<html><body><h1>ipinfo/cache\interface.py</h1>Killed 0 out of 4 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 240</h3><pre>--- ipinfo/cache\interface.py
++++ ipinfo/cache\interface.py
+@@ -8,7 +8,6 @@
+ class CacheInterface(metaclass=abc.ABCMeta):
+     """Interface for using custom cache."""
+ 
+-    @abc.abstractmethod
+     def __contains__(self, key):
+         pass
+ 
+</pre><h3>Mutant 241</h3><pre>--- ipinfo/cache\interface.py
++++ ipinfo/cache\interface.py
+@@ -12,7 +12,6 @@
+     def __contains__(self, key):
+         pass
+ 
+-    @abc.abstractmethod
+     def __setitem__(self, key, value):
+         pass
+ 
+</pre><h3>Mutant 242</h3><pre>--- ipinfo/cache\interface.py
++++ ipinfo/cache\interface.py
+@@ -16,7 +16,6 @@
+     def __setitem__(self, key, value):
+         pass
+ 
+-    @abc.abstractmethod
+     def __getitem__(self, key):
+         pass
+ 
+</pre><h3>Mutant 243</h3><pre>--- ipinfo/cache\interface.py
++++ ipinfo/cache\interface.py
+@@ -20,7 +20,6 @@
+     def __getitem__(self, key):
+         pass
+ 
+-    @abc.abstractmethod
+     def __delitem__(self, key):
+         pass
+ 
+</pre></body></html>
