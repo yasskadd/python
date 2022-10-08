@@ -16,13 +16,13 @@ class Test_Mutants(unittest.TestCase):
         self.assertEqual(handler.request_options["timeout"], 2)
 
     @mock.patch('requests.get')
-    def test_getDetails_mutant2(self, mock_requests):
+    def test_get_details_mutant2(self, mock_requests):
         handler = Handler(self.token)
         mock_requests.return_value.status_code = 429
         with pytest.raises(RequestQuotaExceededError):
             handler.getDetails()
 
-    def test_getHeaders_mutant4(self):
+    def test_get_headers_mutant4(self):
         expected = 'Bearer ' + self.token
         self.assertEqual(get_headers(self.token)['authorization'], expected)
 
