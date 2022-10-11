@@ -494,6 +494,17 @@
  
              # lookup
              try:
+</pre><h3>Mutant 81</h3><pre>--- ipinfo/handler.py
++++ ipinfo/handler.py
+@@ -201,7 +201,7 @@
+                     raise_on_fail, TimeoutExceededError(), result
+                 )
+ 
+-            chunk = lookup_addresses[i : i + batch_size]
++            chunk = None
+ 
+             # lookup
+             try:
 </pre><h3>Mutant 82</h3><pre>--- ipinfo/handler.py
 +++ ipinfo/handler.py
 @@ -205,9 +205,7 @@
@@ -595,15 +606,4 @@
          response = requests.post(
              url, json=ip_strs, headers=headers, **req_opts
          )
-</pre><h2>Suspicious</h2>Mutants that made the test suite take longer, but otherwise seemed ok<h3>Mutant 81</h3><pre>--- ipinfo/handler.py
-+++ ipinfo/handler.py
-@@ -201,7 +201,7 @@
-                     raise_on_fail, TimeoutExceededError(), result
-                 )
- 
--            chunk = lookup_addresses[i : i + batch_size]
-+            chunk = None
- 
-             # lookup
-             try:
 </pre></body></html>

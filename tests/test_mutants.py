@@ -3,7 +3,7 @@ import unittest
 import mock
 from ipinfo import Handler
 from ipinfo.exceptions import RequestQuotaExceededError
-from ipinfo.handler_utils import get_headers
+from ipinfo.handler_utils import get_headers, CACHE_TTL
 
 
 class Test_Mutants(unittest.TestCase):
@@ -21,6 +21,10 @@ class Test_Mutants(unittest.TestCase):
         mock_requests.return_value.status_code = 429
         with pytest.raises(RequestQuotaExceededError):
             handler.getDetails()
+
+    def test_cache_ttl_mutant3(self):
+        expected = 60 * 60 * 24
+        self.assertEqual(CACHE_TTL, expected)
 
     def test_get_headers_mutant4(self):
         expected = 'Bearer ' + self.token

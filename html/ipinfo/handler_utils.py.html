@@ -1,4 +1,4 @@
-<html><body><h1>ipinfo/handler_utils.py</h1>Killed 36 out of 56 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 187</h3><pre>--- ipinfo/handler_utils.py
+<html><body><h1>ipinfo/handler_utils.py</h1>Killed 43 out of 56 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 187</h3><pre>--- ipinfo/handler_utils.py
 +++ ipinfo/handler_utils.py
 @@ -18,7 +18,7 @@
  COUNTRY_EU_FILE_DEFAULT = "eu.json"
@@ -31,61 +31,6 @@
  
  # The default TTL of the cache in seconds
  CACHE_TTL = 60 * 60 * 24
-</pre><h3>Mutant 191</h3><pre>--- ipinfo/handler_utils.py
-+++ ipinfo/handler_utils.py
-@@ -24,7 +24,7 @@
- CACHE_MAXSIZE = 4096
- 
- # The default TTL of the cache in seconds
--CACHE_TTL = 60 * 60 * 24
-+CACHE_TTL = 61 * 60 * 24
- 
- # The current version of the cached data.
- # Update this if the data being cached has changed in shape for the same key.
-</pre><h3>Mutant 192</h3><pre>--- ipinfo/handler_utils.py
-+++ ipinfo/handler_utils.py
-@@ -24,7 +24,7 @@
- CACHE_MAXSIZE = 4096
- 
- # The default TTL of the cache in seconds
--CACHE_TTL = 60 * 60 * 24
-+CACHE_TTL = 60 / 60 * 24
- 
- # The current version of the cached data.
- # Update this if the data being cached has changed in shape for the same key.
-</pre><h3>Mutant 193</h3><pre>--- ipinfo/handler_utils.py
-+++ ipinfo/handler_utils.py
-@@ -24,7 +24,7 @@
- CACHE_MAXSIZE = 4096
- 
- # The default TTL of the cache in seconds
--CACHE_TTL = 60 * 60 * 24
-+CACHE_TTL = 60 * 61 * 24
- 
- # The current version of the cached data.
- # Update this if the data being cached has changed in shape for the same key.
-</pre><h3>Mutant 194</h3><pre>--- ipinfo/handler_utils.py
-+++ ipinfo/handler_utils.py
-@@ -24,7 +24,7 @@
- CACHE_MAXSIZE = 4096
- 
- # The default TTL of the cache in seconds
--CACHE_TTL = 60 * 60 * 24
-+CACHE_TTL = 60 * 60 / 24
- 
- # The current version of the cached data.
- # Update this if the data being cached has changed in shape for the same key.
-</pre><h3>Mutant 195</h3><pre>--- ipinfo/handler_utils.py
-+++ ipinfo/handler_utils.py
-@@ -24,7 +24,7 @@
- CACHE_MAXSIZE = 4096
- 
- # The default TTL of the cache in seconds
--CACHE_TTL = 60 * 60 * 24
-+CACHE_TTL = 60 * 60 * 25
- 
- # The current version of the cached data.
- # Update this if the data being cached has changed in shape for the same key.
 </pre><h3>Mutant 197</h3><pre>--- ipinfo/handler_utils.py
 +++ ipinfo/handler_utils.py
 @@ -28,7 +28,7 @@
@@ -152,28 +97,6 @@
          ),
          "accept": "application/json",
      }
-</pre><h3>Mutant 210</h3><pre>--- ipinfo/handler_utils.py
-+++ ipinfo/handler_utils.py
-@@ -47,7 +47,7 @@
-     }
- 
-     if access_token:
--        headers["authorization"] = "Bearer {}".format(access_token)
-+        headers["authorization"] = "XXBearer {}XX".format(access_token)
- 
-     return headers
- 
-</pre><h3>Mutant 211</h3><pre>--- ipinfo/handler_utils.py
-+++ ipinfo/handler_utils.py
-@@ -47,7 +47,7 @@
-     }
- 
-     if access_token:
--        headers["authorization"] = "Bearer {}".format(access_token)
-+        headers["authorization"] = None
- 
-     return headers
- 
 </pre><h3>Mutant 216</h3><pre>--- ipinfo/handler_utils.py
 +++ ipinfo/handler_utils.py
 @@ -57,7 +57,7 @@
